@@ -1,0 +1,24 @@
+{
+  "name": "quoter",
+  "version": "1.0.0",
+  "description": "/Quoter: random quote machine ,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "random",
+    "quotes",
+    "fcc"
+  ],
+  "author": "Sabrina L",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
