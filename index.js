@@ -11,4 +11,4 @@ routes(app);
 
 app.listen(port);
 console.log("APP running at port "+port);
-console.log(process.env);
+console.log(process.env.NODE_ENV);
