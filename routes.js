@@ -11,6 +11,23 @@ module.exports = function(app){
 				res.end(data);
 			});	
 		});
+
+	app.get('/Judo', function(req,res){
+			fs.readFile('./Judo/entry.html', function(err,data){
+				res.end(data);
+			});	
+		});
+
+	app.get('/React', function(req,res){
+			fs.readFile('./Reactz/entry.html', function(err,data){
+				res.end(data);
+			});	
+		});
+	app.get('/Vue', function(req,res){
+			fs.readFile('./Vue/entry.html', function(err,data){
+				res.end(data);
+			});	
+		});
 	app.get('/Profile', function(req,res){
 			res.sendFile(__dirname+'/Profile/entry.html');
 		});	
