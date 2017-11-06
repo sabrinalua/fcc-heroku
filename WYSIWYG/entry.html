@@ -1,0 +1,69 @@
+<html>
+  <head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://cdn.quilljs.com/1.3.3/quill.snow.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.3/quill.bubble.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+  <div class="container" style="height:375px">
+  	<div class="row">
+  		<div class="col-xs-6">
+  			<h1>Quill.js</h1>
+  			<div class="row"><div id="editor-container"></div></div>
+  			<div class="row"><button type="submit" onclick="doz()"> Submit</button></div>
+	  	</div>
+	  	<div class="col-xs-6">
+	  		<h1>CKEditor</h1>
+	  		<div class="row">
+	  			<textarea name="desca" cols="40" rows="10" id="desca" class="ckeditor" style="visibility: hidden; display: none;"></textarea>
+	  		</div>
+			<div class="row">
+				<button type="button" id="getDataBtn">Get Data</button>
+			</div>
+			
+	  	</div>
+  	</div>
+  	
+  </div>
+
+    <footer>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      	<script src="https://cdn.quilljs.com/1.3.3/quill.js"></script>
+      
+      	<script type="text/javascript">
+	      $(function() {
+	      	var s =$(location).attr('href');
+	        console.log( s );
+	        
+	      });
+	        var quill = new Quill('#editor-container', {
+	        modules: {
+	          toolbar: [
+	            [{ header: [1, 2, false] }],
+	            ['bold', 'italic','underline'],
+	            [/*'image', */'code-block']
+	          ]
+	        },
+	        placeholder: 'Compose an epic...',
+	        theme: 'snow'  // or 'bubble'
+	      });   
+	      function doz (){
+	        var editor_content = quill.container.firstChild.innerHTML;
+	        alert(editor_content); 
+	      }
+	       
+	    </script>
+    </footer>
+  </body>
+</html>
