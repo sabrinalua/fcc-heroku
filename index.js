@@ -1,4 +1,4 @@
-//express and routing
+//express and routing...
 var express = require('express'),
 	app = express(),
 	router = express.Router(),
