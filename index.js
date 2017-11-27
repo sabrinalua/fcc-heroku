@@ -1,3 +1,4 @@
+//express and routing
 var express = require('express'),
 	app = express(),
 	router = express.Router(),
@@ -15,7 +16,7 @@ var db = require('mongoose'),
 	MongoClient = db.MongoClient;
 	mongoose.Promise = global.Promise;
 	mongoose.connect(dbUrl, {useMongoClient:true});
-	
+
 routes(app);
 app.listen(port);
 
